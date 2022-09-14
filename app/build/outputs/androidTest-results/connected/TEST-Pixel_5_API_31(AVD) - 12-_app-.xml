@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite tests="0" failures="0" errors="0" skipped="0" time="1.663145536231E9" timestamp="2022-09-14T08:52:16" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_5_API_31(AVD) - 12" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+</testsuite>
