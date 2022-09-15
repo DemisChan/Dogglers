@@ -13,6 +13,7 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
+                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/cbdf09a3c6fb17b572712fc052bc393a/transformed/jetified-viewbinding-7.2.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/8fa0a8f54699771ec1bf76ad8bb3957b/transformed/jetified-kotlin-stdlib-jdk8-1.6.21.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/0fe72fba6e44a5d0d8d3593fef6be861/transformed/jetified-fragment-testing-1.4.1-api.jar</arg>

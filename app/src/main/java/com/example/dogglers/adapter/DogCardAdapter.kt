@@ -33,7 +33,6 @@ import com.example.dogglers.model.Dog
  * Adapter to inflate the appropriate list item layout and populate the view with information
  * from the appropriate data source
  */
-private const val TAG = "Adapter----->"
 
 class DogCardAdapter(
     private val context: Context?,
@@ -72,13 +71,11 @@ class DogCardAdapter(
         return DogCardViewHolder(adapterLayout)
     }
 
-    override fun getItemCount(): Int =
-        dataset.size // Completed return the size of the data set instead of 0
+    override fun getItemCount(): Int = dataset.size // Completed return the size of the data set instead of 0
 
     override fun onBindViewHolder(holder: DogCardViewHolder, position: Int) {
         // Completed Get the data at the current position
         val item = dataset[position]
-        Log.i(TAG, "My Dataset-----------$item")
         // Completed Set the image resource for the current dog
         holder.imageView.setImageResource(item.imageResourceId)
         // Completed Set the text for the current dog's name

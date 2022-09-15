@@ -20,10 +20,10 @@ com.example.dogglers.test.app-jetified-lifecycle-process-2.4.0-18 /home/demis.la
 com.example.dogglers.test.app-lifecycle-viewmodel-2.3.1-19 /home/demis.lavrentidis/.gradle/caches/transforms-3/f0e0c80fdd86e6bbca469ccc3ea3efa5/transformed/lifecycle-viewmodel-2.3.1/res
 com.example.dogglers.test.app-espresso-contrib-3.4.0-20 /home/demis.lavrentidis/.gradle/caches/transforms-3/f88b02b30e8e688d9c9596e1f77d6c05/transformed/espresso-contrib-3.4.0/res
 com.example.dogglers.test.app-material-1.6.0-21 /home/demis.lavrentidis/.gradle/caches/transforms-3/ffb82cca875567f145f045a5ad86bba0/transformed/material-1.6.0/res
-com.example.dogglers.test.app-androidTest-22 /space/Android/AndroidStudioProjects/android-basics-kotlin-dogglers-app/app/build/generated/res/resValues/androidTest/debug
-com.example.dogglers.test.app-androidTest-23 /space/Android/AndroidStudioProjects/android-basics-kotlin-dogglers-app/app/build/generated/res/rs/androidTest/debug
-com.example.dogglers.test.app-mergeDebugAndroidTestResources-24 /space/Android/AndroidStudioProjects/android-basics-kotlin-dogglers-app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.example.dogglers.test.app-mergeDebugAndroidTestResources-25 /space/Android/AndroidStudioProjects/android-basics-kotlin-dogglers-app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.example.dogglers.test.app-merged_res-26 /space/Android/AndroidStudioProjects/android-basics-kotlin-dogglers-app/app/build/intermediates/merged_res/debugAndroidTest
-com.example.dogglers.test.app-androidTest-27 /space/Android/AndroidStudioProjects/android-basics-kotlin-dogglers-app/app/src/androidTest/res
-com.example.dogglers.test.app-androidTestDebug-28 /space/Android/AndroidStudioProjects/android-basics-kotlin-dogglers-app/app/src/androidTestDebug/res
+com.example.dogglers.test.app-androidTest-22 /space/Android/AndroidStudioProjects/Dogglers/app/build/generated/res/resValues/androidTest/debug
+com.example.dogglers.test.app-androidTest-23 /space/Android/AndroidStudioProjects/Dogglers/app/build/generated/res/rs/androidTest/debug
+com.example.dogglers.test.app-mergeDebugAndroidTestResources-24 /space/Android/AndroidStudioProjects/Dogglers/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.dogglers.test.app-mergeDebugAndroidTestResources-25 /space/Android/AndroidStudioProjects/Dogglers/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.dogglers.test.app-merged_res-26 /space/Android/AndroidStudioProjects/Dogglers/app/build/intermediates/merged_res/debugAndroidTest
+com.example.dogglers.test.app-androidTest-27 /space/Android/AndroidStudioProjects/Dogglers/app/src/androidTest/res
+com.example.dogglers.test.app-androidTestDebug-28 /space/Android/AndroidStudioProjects/Dogglers/app/src/androidTestDebug/res

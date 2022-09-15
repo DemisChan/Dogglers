@@ -1,34 +1,1004 @@
-# 2022-09-14T08:52:16.325Z:
-test_status: ERROR
-platform_error {
-  error_detail {
-    summary {
-      namespace {
-        namespace: "com.google.testing.platform"
-      }
-      error_code: 2002
-      error_name: "PLUGIN_ERROR"
-      error_classification: "TEST"
-      error_message: "Exception thrown during onBeforeAll invocation of plugin com.google.testing.platform.plugin.android.AndroidDevicePlugin."
-      stack_trace: "com.google.testing.platform.api.plugin.PluginException: Exception thrown during onBeforeAll invocation of plugin com.google.testing.platform.plugin.android.AndroidDevicePlugin.\n\tat com.google.testing.platform.plugin.PluginLifecycleKt.invokeOrThrow(PluginLifecycle.kt:216)\n\tat com.google.testing.platform.plugin.PluginLifecycleKt.invokeOrThrow$default(PluginLifecycle.kt:205)\n\tat com.google.testing.platform.plugin.PluginLifecycle$onBeforeAll$1.invoke(PluginLifecycle.kt:92)\n\tat com.google.testing.platform.plugin.PluginLifecycle$onBeforeAll$1.invoke(PluginLifecycle.kt:88)\n\tat com.google.testing.platform.core.telemetry.common.noop.NoopDiagnosticsScope.recordEvent(NoopDiagnosticsScope.kt:35)\n\tat com.google.testing.platform.core.telemetry.TelemetryKt.recordEvent(Telemetry.kt:105)\n\tat com.google.testing.platform.core.telemetry.TelemetryKt.recordEvent$default(Telemetry.kt:98)\n\tat com.google.testing.platform.plugin.PluginLifecycle.onBeforeAll(PluginLifecycle.kt:88)\n\tat com.google.testing.platform.executor.SingleDeviceExecutor$execute$4.invoke(SingleDeviceExecutor.kt:86)\n\tat com.google.testing.platform.executor.SingleDeviceExecutor$execute$4.invoke(SingleDeviceExecutor.kt:86)\n\tat com.google.testing.platform.executor.SingleDeviceExecutor.runUnlessCancelled(SingleDeviceExecutor.kt:105)\n\tat com.google.testing.platform.executor.SingleDeviceExecutor.execute(SingleDeviceExecutor.kt:86)\n\tat com.google.testing.platform.RunnerImpl.run(RunnerImpl.kt:108)\n\tat com.google.testing.platform.server.strategy.NonInteractiveServerStrategy$run$4.invoke(NonInteractiveServerStrategy.kt:80)\n\tat com.google.testing.platform.server.strategy.NonInteractiveServerStrategy$run$4.invoke(NonInteractiveServerStrategy.kt:79)\n\tat com.google.testing.platform.core.telemetry.common.noop.NoopDiagnosticsScope.recordEvent(NoopDiagnosticsScope.kt:35)\n\tat com.google.testing.platform.core.telemetry.TelemetryKt.recordEvent(Telemetry.kt:66)\n\tat com.google.testing.platform.server.strategy.NonInteractiveServerStrategy.run(NonInteractiveServerStrategy.kt:79)\n\tat com.google.testing.platform.main.MainKt$main$4.invokeSuspend(Main.kt:67)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:274)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat com.google.testing.platform.main.MainKt.main(Main.kt:66)\n\tat com.google.testing.platform.main.MainKt.main$default(Main.kt:34)\n\tat com.google.testing.platform.main.MainKt.main(Main.kt)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat com.google.testing.platform.launcher.Launcher.main(Launcher.java:149)\nCaused by: com.google.testing.platform.core.error.UtpException: ErrorName: UNKNOWN\nNameSpace: DdmlibAndroidDeviceController\nErrorCode: 1\nMessage: Failed to install APKs: UNKNOWN\n\tat com.android.tools.utp.plugins.deviceprovider.ddmlib.DdmlibAndroidDeviceController$executeAsync$deferred$1.invokeSuspend(DdmlibAndroidDeviceController.kt:197)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)\nCaused by: com.android.ddmlib.InstallException: Unknown failure: Exception occurred while executing \'install\':\nandroid.os.ParcelableException: java.io.IOException: Requested internal only, but not enough space\nat android.util.ExceptionUtils.wrap(ExceptionUtils.java:34)\nat com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:564)\nat com.android.server.pm.PackageManagerShellCommand.doCreateSession(PackageManagerShellCommand.java:3143)\nat com.android.server.pm.PackageManagerShellCommand.doRunInstall(PackageManagerShellCommand.java:1341)\nat com.android.server.pm.PackageManagerShellCommand.runInstall(PackageManagerShellCommand.java:1303)\nat com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:193)\nat com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)\nat android.os.ShellCommand.exec(ShellCommand.java:38)\nat com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:24626)\nat android.os.Binder.shellCommand(Binder.java:950)\nat android.os.Binder.onTransact(Binder.java:834)\nat android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:4818)\nat com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:8506)\nat android.os.Binder.execTransactInternal(Binder.java:1184)\nat android.os.Binder.execTransact(Binder.java:1143)\nCaused by: java.io.IOException: Requested internal only, but not enough space\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:236)\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:147)\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:162)\nat com.android.server.pm.PackageInstallerService.createSessionInternal(PackageInstallerService.java:776)\nat com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:561)\n... 13 more\n\tat com.android.ddmlib.internal.DeviceImpl.installRemotePackage(DeviceImpl.java:1315)\n\tat com.android.ddmlib.internal.DeviceImpl.installPackage(DeviceImpl.java:1141)\n\tat com.android.tools.utp.plugins.deviceprovider.ddmlib.DdmlibAndroidDevice.installPackage(DdmlibAndroidDevice.kt)\n\tat com.android.tools.utp.plugins.deviceprovider.ddmlib.DdmlibAndroidDeviceController$executeAsync$deferred$1.invokeSuspend(DdmlibAndroidDeviceController.kt:166)\n\t... 6 more\n"
+# 2022-09-15T07:52:31.932Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 19
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "ButtonTests"
+    test_package: "com.example.dogglers"
+    test_method: "grid_list_button_is_displayed"
+    start_time {
+      seconds: 1663228329
+      nanos: 707000000
     }
-    cause {
-      summary {
-        namespace {
-          namespace: "DdmlibAndroidDeviceController"
-        }
-        error_code: 1
-        error_name: "UNKNOWN"
-        error_classification: "TEST"
-        error_message: "Failed to install APKs: UNKNOWN"
-        stack_trace: "com.google.testing.platform.core.error.UtpException: ErrorName: UNKNOWN\nNameSpace: DdmlibAndroidDeviceController\nErrorCode: 1\nMessage: Failed to install APKs: UNKNOWN\n\tat com.android.tools.utp.plugins.deviceprovider.ddmlib.DdmlibAndroidDeviceController$executeAsync$deferred$1.invokeSuspend(DdmlibAndroidDeviceController.kt:197)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)\nCaused by: com.android.ddmlib.InstallException: Unknown failure: Exception occurred while executing \'install\':\nandroid.os.ParcelableException: java.io.IOException: Requested internal only, but not enough space\nat android.util.ExceptionUtils.wrap(ExceptionUtils.java:34)\nat com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:564)\nat com.android.server.pm.PackageManagerShellCommand.doCreateSession(PackageManagerShellCommand.java:3143)\nat com.android.server.pm.PackageManagerShellCommand.doRunInstall(PackageManagerShellCommand.java:1341)\nat com.android.server.pm.PackageManagerShellCommand.runInstall(PackageManagerShellCommand.java:1303)\nat com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:193)\nat com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)\nat android.os.ShellCommand.exec(ShellCommand.java:38)\nat com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:24626)\nat android.os.Binder.shellCommand(Binder.java:950)\nat android.os.Binder.onTransact(Binder.java:834)\nat android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:4818)\nat com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:8506)\nat android.os.Binder.execTransactInternal(Binder.java:1184)\nat android.os.Binder.execTransact(Binder.java:1143)\nCaused by: java.io.IOException: Requested internal only, but not enough space\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:236)\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:147)\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:162)\nat com.android.server.pm.PackageInstallerService.createSessionInternal(PackageInstallerService.java:776)\nat com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:561)\n... 13 more\n\tat com.android.ddmlib.internal.DeviceImpl.installRemotePackage(DeviceImpl.java:1315)\n\tat com.android.ddmlib.internal.DeviceImpl.installPackage(DeviceImpl.java:1141)\n\tat com.android.tools.utp.plugins.deviceprovider.ddmlib.DdmlibAndroidDevice.installPackage(DdmlibAndroidDevice.kt)\n\tat com.android.tools.utp.plugins.deviceprovider.ddmlib.DdmlibAndroidDeviceController$executeAsync$deferred$1.invokeSuspend(DdmlibAndroidDeviceController.kt:166)\n\t... 6 more\n"
-      }
-      cause {
-        summary {
-          error_message: "Unknown failure: Exception occurred while executing \'install\':\nandroid.os.ParcelableException: java.io.IOException: Requested internal only, but not enough space\nat android.util.ExceptionUtils.wrap(ExceptionUtils.java:34)\nat com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:564)\nat com.android.server.pm.PackageManagerShellCommand.doCreateSession(PackageManagerShellCommand.java:3143)\nat com.android.server.pm.PackageManagerShellCommand.doRunInstall(PackageManagerShellCommand.java:1341)\nat com.android.server.pm.PackageManagerShellCommand.runInstall(PackageManagerShellCommand.java:1303)\nat com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:193)\nat com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)\nat android.os.ShellCommand.exec(ShellCommand.java:38)\nat com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:24626)\nat android.os.Binder.shellCommand(Binder.java:950)\nat android.os.Binder.onTransact(Binder.java:834)\nat android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:4818)\nat com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:8506)\nat android.os.Binder.execTransactInternal(Binder.java:1184)\nat android.os.Binder.execTransact(Binder.java:1143)\nCaused by: java.io.IOException: Requested internal only, but not enough space\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:236)\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:147)\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:162)\nat com.android.server.pm.PackageInstallerService.createSessionInternal(PackageInstallerService.java:776)\nat com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:561)\n... 13 more"
-          stack_trace: "com.android.ddmlib.InstallException: Unknown failure: Exception occurred while executing \'install\':\nandroid.os.ParcelableException: java.io.IOException: Requested internal only, but not enough space\nat android.util.ExceptionUtils.wrap(ExceptionUtils.java:34)\nat com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:564)\nat com.android.server.pm.PackageManagerShellCommand.doCreateSession(PackageManagerShellCommand.java:3143)\nat com.android.server.pm.PackageManagerShellCommand.doRunInstall(PackageManagerShellCommand.java:1341)\nat com.android.server.pm.PackageManagerShellCommand.runInstall(PackageManagerShellCommand.java:1303)\nat com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:193)\nat com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)\nat android.os.ShellCommand.exec(ShellCommand.java:38)\nat com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:24626)\nat android.os.Binder.shellCommand(Binder.java:950)\nat android.os.Binder.onTransact(Binder.java:834)\nat android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:4818)\nat com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:8506)\nat android.os.Binder.execTransactInternal(Binder.java:1184)\nat android.os.Binder.execTransact(Binder.java:1143)\nCaused by: java.io.IOException: Requested internal only, but not enough space\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:236)\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:147)\nat com.android.internal.content.PackageHelper.resolveInstallVolume(PackageHelper.java:162)\nat com.android.server.pm.PackageInstallerService.createSessionInternal(PackageInstallerService.java:776)\nat com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:561)\n... 13 more\n\tat com.android.ddmlib.internal.DeviceImpl.installRemotePackage(DeviceImpl.java:1315)\n\tat com.android.ddmlib.internal.DeviceImpl.installPackage(DeviceImpl.java:1141)\n\tat com.android.tools.utp.plugins.deviceprovider.ddmlib.DdmlibAndroidDevice.installPackage(DdmlibAndroidDevice.kt)\n\tat com.android.tools.utp.plugins.deviceprovider.ddmlib.DdmlibAndroidDeviceController$executeAsync$deferred$1.invokeSuspend(DdmlibAndroidDeviceController.kt:166)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)\n"
-        }
-      }
+    end_time {
+      seconds: 1663228330
+      nanos: 802000000
     }
   }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.ButtonTests-grid_list_button_is_displayed.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ButtonTests"
+    test_package: "com.example.dogglers"
+    test_method: "clicking_horizontal_list_button_displays_horizontal_list"
+    start_time {
+      seconds: 1663228331
+      nanos: 375000000
+    }
+    end_time {
+      seconds: 1663228332
+      nanos: 384000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.ButtonTests-clicking_horizontal_list_button_displays_horizontal_list.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ButtonTests"
+    test_package: "com.example.dogglers"
+    test_method: "clicking_grid_list_button_displays_grid_list"
+    start_time {
+      seconds: 1663228332
+      nanos: 964000000
+    }
+    end_time {
+      seconds: 1663228333
+      nanos: 971000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.ButtonTests-clicking_grid_list_button_displays_grid_list.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ButtonTests"
+    test_package: "com.example.dogglers"
+    test_method: "clicking_vertical_list_button_displays_vertical_list"
+    start_time {
+      seconds: 1663228334
+      nanos: 576000000
+    }
+    end_time {
+      seconds: 1663228335
+      nanos: 510000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.ButtonTests-clicking_vertical_list_button_displays_vertical_list.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ButtonTests"
+    test_package: "com.example.dogglers"
+    test_method: "horizontal_list_button_is_displayed"
+    start_time {
+      seconds: 1663228336
+      nanos: 64000000
+    }
+    end_time {
+      seconds: 1663228336
+      nanos: 468000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.ButtonTests-horizontal_list_button_is_displayed.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ButtonTests"
+    test_package: "com.example.dogglers"
+    test_method: "vertical_list_button_is_displayed"
+    start_time {
+      seconds: 1663228337
+      nanos: 23000000
+    }
+    end_time {
+      seconds: 1663228337
+      nanos: 401000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.ButtonTests-vertical_list_button_is_displayed.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "GridListTests"
+    test_package: "com.example.dogglers"
+    test_method: "recycler_view_item_count"
+    start_time {
+      seconds: 1663228337
+      nanos: 930000000
+    }
+    end_time {
+      seconds: 1663228338
+      nanos: 889000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.GridListTests-recycler_view_item_count.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "GridListTests"
+    test_package: "com.example.dogglers"
+    test_method: "grid_list_content_on_first_page"
+    start_time {
+      seconds: 1663228338
+      nanos: 916000000
+    }
+    end_time {
+      seconds: 1663228339
+      nanos: 345000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.GridListTests-grid_list_content_on_first_page.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "GridListTests"
+    test_package: "com.example.dogglers"
+    test_method: "vertical_scrolling"
+    start_time {
+      seconds: 1663228339
+      nanos: 899000000
+    }
+    end_time {
+      seconds: 1663228340
+      nanos: 856000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.GridListTests-vertical_scrolling.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "GridListTests"
+    test_package: "com.example.dogglers"
+    test_method: "grid_list_content_at_last_position"
+    start_time {
+      seconds: 1663228341
+      nanos: 410000000
+    }
+    end_time {
+      seconds: 1663228342
+      nanos: 419000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.GridListTests-grid_list_content_at_last_position.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "GridListTests"
+    test_package: "com.example.dogglers"
+    test_method: "grid_list_content_at_first_position"
+    start_time {
+      seconds: 1663228342
+      nanos: 420000000
+    }
+    end_time {
+      seconds: 1663228342
+      nanos: 976000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.GridListTests-grid_list_content_at_first_position.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HorizontalListTests"
+    test_package: "com.example.dogglers"
+    test_method: "recycler_view_item_count"
+    start_time {
+      seconds: 1663228343
+      nanos: 480000000
+    }
+    end_time {
+      seconds: 1663228343
+      nanos: 936000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.HorizontalListTests-recycler_view_item_count.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HorizontalListTests"
+    test_package: "com.example.dogglers"
+    test_method: "horizontal_scrolling"
+    start_time {
+      seconds: 1663228344
+      nanos: 490000000
+    }
+    end_time {
+      seconds: 1663228345
+      nanos: 19000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.HorizontalListTests-horizontal_scrolling.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HorizontalListTests"
+    test_package: "com.example.dogglers"
+    test_method: "horizontal_scroll_content_at_last_position"
+    start_time {
+      seconds: 1663228345
+      nanos: 598000000
+    }
+    end_time {
+      seconds: 1663228346
+      nanos: 3000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.HorizontalListTests-horizontal_scroll_content_at_last_position.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HorizontalListTests"
+    test_package: "com.example.dogglers"
+    test_method: "horizontal_scroll_content_at_first_position"
+    start_time {
+      seconds: 1663228346
+      nanos: 507000000
+    }
+    end_time {
+      seconds: 1663228347
+      nanos: 37000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.HorizontalListTests-horizontal_scroll_content_at_first_position.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "VerticalListTests"
+    test_package: "com.example.dogglers"
+    test_method: "recycler_view_item_count"
+    start_time {
+      seconds: 1663228347
+      nanos: 591000000
+    }
+    end_time {
+      seconds: 1663228348
+      nanos: 21000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.VerticalListTests-recycler_view_item_count.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "VerticalListTests"
+    test_package: "com.example.dogglers"
+    test_method: "vertical_scroll_content_at_last_position"
+    start_time {
+      seconds: 1663228348
+      nanos: 528000000
+    }
+    end_time {
+      seconds: 1663228348
+      nanos: 982000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.VerticalListTests-vertical_scroll_content_at_last_position.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "VerticalListTests"
+    test_package: "com.example.dogglers"
+    test_method: "vertical_scrolling"
+    start_time {
+      seconds: 1663228349
+      nanos: 537000000
+    }
+    end_time {
+      seconds: 1663228350
+      nanos: 91000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.VerticalListTests-vertical_scrolling.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "VerticalListTests"
+    test_package: "com.example.dogglers"
+    test_method: "vertical_scroll_content_at_first_position"
+    start_time {
+      seconds: 1663228350
+      nanos: 596000000
+    }
+    end_time {
+      seconds: 1663228351
+      nanos: 100000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/logcat-com.example.dogglers.VerticalListTests-vertical_scroll_content_at_first_position.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/space/Android/AndroidStudioProjects/Dogglers/app/build/outputs/androidTest-results/connected/Pixel_5_API_31(AVD) - 12/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
 }

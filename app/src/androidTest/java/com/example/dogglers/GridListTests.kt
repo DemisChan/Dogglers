@@ -24,7 +24,9 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
+import com.example.dogglers.BaseTest
 import com.example.dogglers.BaseTest.DrawableMatcher.hasItemCount
+import com.example.dogglers.GridListActivity
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
